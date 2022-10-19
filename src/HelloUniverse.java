@@ -41,6 +41,15 @@ public class HelloUniverse {
         neptune.diameter = 49532;
         neptune.matter = "Gazeuse";
 
+        Planete planeteX = new Planete();
+
         System.out.println(jupiter.name + " est une planète " + jupiter.matter + " avec un diamètre de " + jupiter.diameter + " kilomètres.");
+        System.out.println(planeteX.name + " est une planète " + planeteX.matter + " avec un diamètre de " + planeteX.diameter + " kilomètres.");
+
+        System.out.println("Neptune a effectué " + neptune.revolution(-3542) + " autour de son étoile");
+
+        System.out.println("Mars a effectué " + mars.rotation(-684)+ " sur elle même");
+
+        System.out.println("Venus a effectué " + venus.rotation(1250)+ " sur elle même");
     }
 }
