@@ -51,5 +51,10 @@ public class HelloUniverse {
         System.out.println("Mars a effectué " + mars.rotation(-684)+ " sur elle même");
 
         System.out.println("Venus a effectué " + venus.rotation(1250)+ " sur elle même");
+
+        mars.welcomeSpaceship(8);
+        mars.welcomeSpaceship("FRIGATE");
+
+        System.out.println("Le nombre d'humains ayant déjà séjourné sur Mars est actuellement de "+mars.totalVisitors+".");
     }
 }
