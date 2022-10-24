@@ -60,11 +60,35 @@ public class HelloUniverse {
 
         System.out.println("Venus a effectué " + venus.rotation(1250)+ " sur elle même");
 
-        mars.welcomeSpaceship(8);
-        mars.welcomeSpaceship("FRIGATE");
+        Vaisseau firstSpaceShip = new Vaisseau();
 
-        System.out.println("Le nombre d'humains ayant déjà séjourné sur Mars est actuellement de "+mars.totalVisitors+".");
+        firstSpaceShip.type = "FRIGATE";
+        firstSpaceShip.nbPeople = 9;
 
+        Vaisseau outGoing = mars.welcomeSpaceship(firstSpaceShip);
+        if (outGoing == null) {
+            System.out.println("Aucun vaisseau ne s'en va.");
+        }
+        else {
+            System.out.println("Un vaisseau de type " + outGoing.type + " doit s'en aller.");
+        }
+
+        Vaisseau secondSpaceShip = new Vaisseau();
+
+        secondSpaceShip.type = "CRUISER";
+        secondSpaceShip.nbPeople = 42;
+
+        outGoing = mars.welcomeSpaceship(secondSpaceShip);
+
+        if (outGoing == null) {
+            System.out.println("Aucun vaisseau ne s'en va.");
+        }
+        else {
+            System.out.println("Un vaisseau de type " + outGoing.type + " doit s'en aller.");
+        }
+
+        System.out.println("Le nombre d'humains ayant déjà séjourné sur Mars est actuellement de " + mars.totalVisitors + ".");
+        
         System.out.println("L'atmosphère de Uranus est composée :");
         System.out.println("A "+uranus.atmosphere.hydrogenRate+"% d'hydrogène");
         System.out.println("A "+uranus.atmosphere.argonRate+"% d'argon");

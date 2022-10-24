@@ -6,6 +6,8 @@ public class Planete {
 
     Atmosphere atmosphere;
 
+    Vaisseau spaceShipDocked;
+
     int revolution(int angle){
         return angle/360;
     }
@@ -14,21 +16,13 @@ public class Planete {
         return angle/360;
     }
 
-    void welcomeSpaceship(int numberOfNewHumans){
-        totalVisitors += numberOfNewHumans;
+    Vaisseau welcomeSpaceship(Vaisseau newSpaceShip) {
+        totalVisitors += newSpaceShip.nbPeople;
+
+        Vaisseau previousSpaceShip = spaceShipDocked;
+        spaceShipDocked = newSpaceShip;
+
+        return previousSpaceShip;
     }
 
-    void welcomeSpaceship(String shipType){
-        if (shipType.equals("HUNTER")){
-            totalVisitors +=3;
-        }
-
-        else if (shipType.equals("FRIGATE")){
-            totalVisitors +=12;
-        }
-
-        if (shipType.equals("CRUISER")){
-            totalVisitors +=50;
-        }
-    }
 }
