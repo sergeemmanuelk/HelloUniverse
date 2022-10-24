@@ -43,6 +43,14 @@ public class HelloUniverse {
 
         Planete planeteX = new Planete();
 
+        Atmosphere atmosphereUranus = new Atmosphere();
+
+        atmosphereUranus.hydrogenRate = 83f;
+        atmosphereUranus.heliumRate = 15f;
+        atmosphereUranus.methaneRate = 2.5f;
+
+        uranus.atmosphere = atmosphereUranus;
+
         System.out.println(jupiter.name + " est une planète " + jupiter.matter + " avec un diamètre de " + jupiter.diameter + " kilomètres.");
         System.out.println(planeteX.name + " est une planète " + planeteX.matter + " avec un diamètre de " + planeteX.diameter + " kilomètres.");
 
@@ -56,5 +64,15 @@ public class HelloUniverse {
         mars.welcomeSpaceship("FRIGATE");
 
         System.out.println("Le nombre d'humains ayant déjà séjourné sur Mars est actuellement de "+mars.totalVisitors+".");
+
+        System.out.println("L'atmosphère de Uranus est composée :");
+        System.out.println("A "+uranus.atmosphere.hydrogenRate+"% d'hydrogène");
+        System.out.println("A "+uranus.atmosphere.argonRate+"% d'argon");
+        System.out.println("A "+uranus.atmosphere.carbonDioxideRate+"% de dioxyde de carbone");
+        System.out.println("A "+uranus.atmosphere.heliumRate+"% d'hélium");
+        System.out.println("A "+uranus.atmosphere.methaneRate+"% de méthane");
+        System.out.println("A "+uranus.atmosphere.sodiumRate+"% de sodium");
+
+
     }
 }

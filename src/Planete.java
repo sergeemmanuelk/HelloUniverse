@@ -4,6 +4,8 @@ public class Planete {
     long diameter;
     int totalVisitors;
 
+    Atmosphere atmosphere;
+
     int revolution(int angle){
         return angle/360;
     }
