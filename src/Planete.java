@@ -10,7 +10,8 @@ public class Planete {
 
     Vaisseau spaceShipDocked;
 
-    Planete () {
+    Planete (String name) {
+        this.name = name;
         nbPlanetsDiscovered++;
     }
 
