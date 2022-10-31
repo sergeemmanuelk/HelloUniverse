@@ -4,10 +4,15 @@ public class Planete {
     long diameter;
     int totalVisitors;
     static String shape = "Sphérique";
+    static int nbPlanetsDiscovered;
 
     Atmosphere atmosphere;
 
     Vaisseau spaceShipDocked;
+
+    Planete () {
+        nbPlanetsDiscovered++;
+    }
 
     static String expansion (double distance) {
         if (distance < 14) {
