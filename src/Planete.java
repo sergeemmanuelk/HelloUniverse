@@ -9,6 +9,15 @@ public class Planete {
 
     Vaisseau spaceShipDocked;
 
+    static String expansion (double distance) {
+        if (distance < 14) {
+            return "Oh là là, mais c'est super rapide";
+        }
+        else {
+            return "Je rêve ou c'est plus rapide que la lumière";
+        }
+    }
+
     int revolution(int angle){
         return angle/360;
     }
