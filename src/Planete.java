@@ -3,6 +3,7 @@ public class Planete {
     String matter;
     long diameter;
     int totalVisitors;
+    static String shape = "Sphérique";
 
     Atmosphere atmosphere;
 
