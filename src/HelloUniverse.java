@@ -88,7 +88,7 @@ public class HelloUniverse {
         }
 
         System.out.println("Le nombre d'humains ayant déjà séjourné sur Mars est actuellement de " + mars.totalVisitors + ".");
-        
+
         System.out.println("L'atmosphère de Uranus est composée :");
         System.out.println("A "+uranus.atmosphere.hydrogenRate+"% d'hydrogène");
         System.out.println("A "+uranus.atmosphere.argonRate+"% d'argon");
@@ -96,6 +96,9 @@ public class HelloUniverse {
         System.out.println("A "+uranus.atmosphere.heliumRate+"% d'hélium");
         System.out.println("A "+uranus.atmosphere.methaneRate+"% de méthane");
         System.out.println("A "+uranus.atmosphere.sodiumRate+"% de sodium");
+
+        System.out.println("La forme d'une planète est "+ Planete.shape);
+        System.out.println("La forme de Uranus est "+ uranus.shape);
 
 
     }
