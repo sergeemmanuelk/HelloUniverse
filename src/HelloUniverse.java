@@ -90,6 +90,27 @@ public class HelloUniverse {
 
         System.out.println("Le nombre de planete decouverte actuellement est : " + Planete.nbPlanetsDiscovered);
 
+        WarShip hunter = new WarShip();
+
+        hunter.shielding = 150;
+        hunter.shieldResistance = 2;
+        hunter.type = "HUNTER";
+
+        CivilShip shipWorld = new CivilShip();
+
+        shipWorld.shielding = 4784;
+        shipWorld.shieldResistance = 30;
+        shipWorld.type = "SHIP WORLD";
+
+        shipWorld.enableShield();
+        hunter.enableShield();
+
+        hunter.offensive(shipWorld, "Lasers photoniques", 3);
+        shipWorld.disableShield();
+
+        System.out.println("Le Vaisseau-Monde dispose encore de " + shipWorld.shieldResistance + " minutes de protection grâce à son bouclier.");
+        System.out.println("Le Vaisseau-Monde dispose encore d'un blindage de valeur " + shipWorld.shielding + ".");
+
 
     }
 }
